@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/journal.css">
+    <title>Document</title>
+</head>
+<body>
+        <form class=journal__chart action="">
+            <fieldset>
+                <label for="journalDate">Date of entry</label>
+                <br>
+                <input type="date" name="journalDate" id= "journalDate">
+            </fieldset> 
+      
+             <fieldset>
+                <label for="conceptCovered">ConceptsCovered</label>
+                <br>
+                <input type="text" name="conceptCovered" id="conceptCovered">
+            </fieldset>
+         
+           
+            <fieldset>
+               <label for="journalEntry">Journal Entry</label>
+               <br>
+               <textarea name="journalEntry" id="journalEntry" cols="30" rows="10"> </textarea>
+            </fieldset>
+             
+        
+            <fieldset>
+                <label for="journalMood">Mood of the Day</label>
+                <br>
+                <select name="journalMood" id="journalMood">
+                        <option value="irate">irate</option>
+                        <option value="Happy">Happy</option>
+                        <option value="Sad">Sad</option>
+                        <option value="optimistic">Optimistic</option>
+                        <option value="melancholy">melancholy</option>
+                        <option value="determined">determined</option>
+                        <option value="defeated">defeated</option>
+                        <option value="confused">Confused</option>
+                </select>
+            </fieldset> 
+            
+          </form>
+
+  <button id = "record-journal-entry">Submit</button>
+<div class ="entryLog"></div>
+<script src="scripts/makejournalentry.js"></script>
+<script src="scripts/renderJE.js"></script>
+  <script src="scripts/entriesDOM.js"></script>
+  <script src="scripts/apiManager.js"></script>
+  <script src="scripts/data.js"></script>
+    <script src="scripts/journal.js"></script>
+    
+</body>
+</html>
