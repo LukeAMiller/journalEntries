@@ -1,4 +1,5 @@
 import renderJournalEntries from './DOMPrinter.js'
+// gets all data then uses render function imported from DOMPrinter.js
 const apiEntries = {
     getAllEntries: ()=>{
 return fetch("http://localhost:8088/entries") // Fetch from the API
@@ -6,10 +7,7 @@ return fetch("http://localhost:8088/entries") // Fetch from the API
     .then(journalEntrytoPrint => {
      
         renderJournalEntries(journalEntrytoPrint)
-        // journalEntrytoPrint.forEach(
-        //     singleEntry => {document.querySelector(".entryLog").innerHTML +=
-        //     makeJournalEntryComponent.buildEntryCard(singleEntry)}
-        // )
+   
     })
  } }
 export default apiEntries

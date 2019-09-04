@@ -1,3 +1,4 @@
+// Build what my DOM objects will look like
 const makeJournalEntryComponent =  {
     buildEntryCard:(singleJournalObject)=>{
       // Create your own HTML structure for a journal entry
