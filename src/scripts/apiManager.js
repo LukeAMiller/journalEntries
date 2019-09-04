@@ -1,3 +1,4 @@
+import renderJournalEntries from './DOMPrinter.js'
 const apiEntries = {
     getAllEntries: ()=>{
 return fetch("http://localhost:8088/entries") // Fetch from the API
@@ -11,5 +12,4 @@ return fetch("http://localhost:8088/entries") // Fetch from the API
         // )
     })
  } }
-
-    
+export default apiEntries

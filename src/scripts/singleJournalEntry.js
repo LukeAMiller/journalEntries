@@ -10,3 +10,4 @@ const makeJournalEntryComponent =  {
     </article>
       `;}
     }
+    export default makeJournalEntryComponent

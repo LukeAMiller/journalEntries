@@ -5,12 +5,12 @@
 //     conceptsCovered:"javascript conditionals",
 //     journalEntry:"Computer logic operations",
 //     Mood:"melancholy",
-
+import apiEntries from './apiManager.js'
 
 // }
 // console.log(journalEntry)
-var arrayofjournalentries = [
-  ]
+// var arrayofjournalentries = [
+//   ]
 // arrayofjournalentries.push(journalEntry);
 // console.log(arrayofjournalentries)
 
@@ -31,7 +31,7 @@ var arrayofjournalentries = [
 // </article>
 //   `
 // }
-const entryLog =document.querySelector(".entryLog")
+
 // entryLog.innerHTML = makeJournalEntryComponent(journalEntries[0])
 
 
