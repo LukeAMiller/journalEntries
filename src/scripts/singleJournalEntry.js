@@ -8,6 +8,7 @@ const makeJournalEntryComponent =  {
     <h4>${singleJournalObject.concept}</h4>
     <p>${singleJournalObject.entry}</p>
     <h6>${singleJournalObject.mood}</h6>
+    <button id ="delete-${singleJournalObject.id}">Delete</button>
     </article>
       `;}
     }

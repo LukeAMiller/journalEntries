@@ -1,8 +1,11 @@
 
 import apiEntries from './apiManager.js'
+import renderJournalEntries from './DOMPrinter.js'
 
-
-
+apiEntries.getAllEntries()
+.then(parsedEntries =>{
+  renderJournalEntries.PrintEntriesToDOM(parsedEntries)
+})
 //add eventlistener to Submit button once button is clicked get values of  inputs and turns all input values into an object
 const SubmitButton = document.querySelector("#record-journal-entry")
 console.log(SubmitButton)
@@ -15,21 +18,32 @@ const journal = document.querySelector("#journalEntry").value;
 console.log(journal)
 const moody = document.querySelector("#journalMood" ).value;
 const entryObject  = {
-  concept: concepts,
-  date: dateValue,
-  entry: journal,
-  mood: moody
+  "concept": concepts,
+  "date": dateValue,
+  "entry": journal,
+  "mood": moody
 }
-// turns entryObject into json
-fetch("http://localhost:8088/entries", {
-    // Replace "url" with your API's URL
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(entryObject)
-  })
-
+apiEntries.postOneEntry(entryObject)
+.then(apiEntries.getAllEntries)
+.then(parsedEntries => {
+  renderJournalEntries.PrintEntriesToDOM(parsedEntries)
+})});
+document.querySelector("body").addEventListener("click", ()=>{
+  if (event.target.id.includes("delete")){
+    const journalArray = event.target.id.split("-");
+    const idofDeleteObject = journalArray[1]
+    console.log(idofDeleteObject)
+    apiEntries.deleteOneEntry(idofDeleteObject)
+    .then(()=>{
+      apiEntries.getAllEntries()
+      .then(parsedEntries =>{
+        renderJournalEntries.PrintEntriesToDOM(parsedEntries);
+      })
+    })
+    // const idofDeleteObject = journalArray[1]
+  }
 })
+
+
 // calls upon the final function to getAllEntries
 apiEntries.getAllEntries()

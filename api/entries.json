@@ -6,55 +6,6 @@
       "entry": " how to add an object to a json server through user input",
       "mood": "Happy",
       "id": 1
-    },
-    {
-      "concept": "json",
-      "date": "2019-09-04",
-      "entry": " asdf",
-      "mood": "confused",
-      "id": 2
-    },
-    {
-      "concept": "json",
-      "date": "2019-09-04",
-      "entry": " asdf",
-      "mood": "confused",
-      "id": 3
-    },
-    {
-      "concept": "json",
-      "date": "2019-09-04",
-      "entry": " asdf",
-      "mood": "confused",
-      "id": 4
-    },
-    {
-      "concept": "json",
-      "date": "2019-09-05",
-      "entry": " asdf",
-      "mood": "confused",
-      "id": 5
-    },
-    {
-      "concept": "json",
-      "date": "2019-09-05",
-      "entry": " asdf",
-      "mood": "confused",
-      "id": 6
-    },
-    {
-      "concept": "washington",
-      "date": "2019-09-05",
-      "entry": " ffff",
-      "mood": "irate",
-      "id": 7
-    },
-    {
-      "concept": "beavers",
-      "date": "2019-09-04",
-      "entry": " beaver overlords",
-      "mood": "defeated",
-      "id": 8
     }
   ]
 }
